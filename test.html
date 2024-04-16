@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+</head>
+<body>
+<h1>Weather App</h1>
+<p>Current Weather:</p>
+<div id="currentWeather"></div>
+
+<label for="cityInput">Enter city name:</label>
+<input type="text" id="cityInput">
+<button onclick="getWeatherByCity()">Get Weather</button>
+
+<script>
+function getCurrentLocationWeather() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(fetchWeatherByCoords);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function fetchWeatherByCoords(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    const apiKey = 'YOUR_API_KEY'; // Your OpenWeatherMap API key
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            displayWeather(data);
+        })
+        .catch(error => {
+            console.log('Error fetching weather:', error);
+        });
+}
+
+function getWeatherByCity() {
+    const city = document.getElementById('cityInput').value;
+
+    const apiKey = 'YOUR_API_KEY'; // Your OpenWeatherMap API key
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            displayWeather(data);
+        })
+        .catch(error => {
+            console.log('Error fetching weather:', error);
+        });
+}
+
+function displayWeather(data) {
+    const weatherDiv = document.getElementById('currentWeather');
+    weatherDiv.innerHTML = `
+        <p>Location: ${data.name}</p>
+        <p>Temperature: ${data.main.temp}°C</p>
+        <p>Weather: ${data.weather[0].main}</p>
+    `;
+}
+
+// Call this function to get weather based on user's current location
+getCurrentLocationWeather();
+</script>
+</body>
+</html>
