@@ -554,14 +554,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.m-\[100px\] {
-  margin: 100px;
-}
-
-.m-\[50px\] {
-  margin: 50px;
-}
-
 .m-\[20px\] {
   margin: 20px;
 }
@@ -603,10 +595,6 @@ video {
   display: flex;
 }
 
-.h-\[60px\] {
-  height: 60px;
-}
-
 .h-14 {
   height: 3.5rem;
 }
@@ -619,6 +607,10 @@ video {
   width: 2.5rem;
 }
 
+.w-14 {
+  width: 3.5rem;
+}
+
 .w-\[100\%\] {
   width: 100%;
 }
@@ -627,44 +619,8 @@ video {
   width: 170px;
 }
 
-.w-\[60px\] {
-  width: 60px;
-}
-
 .w-\[90\%\] {
   width: 90%;
-}
-
-.w-14 {
-  width: 3.5rem;
-}
-
-.max-w-\[470px\] {
-  max-width: 470px;
-}
-
-.max-w-8 {
-  max-width: 2rem;
-}
-
-.max-w-80 {
-  max-width: 20rem;
-}
-
-.max-w-96 {
-  max-width: 24rem;
-}
-
-.max-w-screen-md {
-  max-width: 768px;
-}
-
-.max-w-screen-sm {
-  max-width: 640px;
-}
-
-.max-w-sm {
-  max-width: 24rem;
 }
 
 .max-w-md {
@@ -693,6 +649,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .rounded-2xl {
@@ -735,19 +695,14 @@ video {
   --tw-gradient-to: #5b548a var(--tw-gradient-to-position);
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-\[10px\] {
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.px-\[40px\] {
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 .py-0 {
@@ -765,24 +720,14 @@ video {
   padding-bottom: 35px;
 }
 
-.px-\[20px\] {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .px-\[px\] {
   padding-left: px;
   padding-right: px;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.px-\[5px\] {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .text-left {
@@ -837,40 +782,6 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .sm\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .sm\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .sm\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .sm\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .sm\:container {
-      max-width: 1536px;
-    }
-  }
-
   .sm\:w-auto {
     width: auto;
   }
@@ -879,16 +790,6 @@ video {
 @media (min-width: 1024px) {
   .lg\:mt-6 {
     margin-top: 1.5rem;
-  }
-
-  .lg\:px-\[\] {
-    padding-left: ;
-    padding-right: ;
-  }
-
-  .lg\:px-\[40\] {
-    padding-left: 40;
-    padding-right: 40;
   }
 
   .lg\:px-\[40px\] {
