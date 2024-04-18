@@ -558,6 +558,14 @@ video {
   margin: 100px;
 }
 
+.m-\[50px\] {
+  margin: 50px;
+}
+
+.m-\[20px\] {
+  margin: 20px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -573,10 +581,6 @@ video {
 
 .mt-12 {
   margin-top: 3rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .mt-\[-10px\] {
@@ -603,6 +607,10 @@ video {
   height: 60px;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -627,12 +635,40 @@ video {
   width: 90%;
 }
 
-.w-full {
-  width: 100%;
+.w-14 {
+  width: 3.5rem;
 }
 
 .max-w-\[470px\] {
   max-width: 470px;
+}
+
+.max-w-8 {
+  max-width: 2rem;
+}
+
+.max-w-80 {
+  max-width: 20rem;
+}
+
+.max-w-96 {
+  max-width: 24rem;
+}
+
+.max-w-screen-md {
+  max-width: 768px;
+}
+
+.max-w-screen-sm {
+  max-width: 640px;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .flex-1 {
@@ -729,6 +765,26 @@ video {
   padding-bottom: 35px;
 }
 
+.px-\[20px\] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.px-\[px\] {
+  padding-left: px;
+  padding-right: px;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -781,20 +837,38 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:m-\[100px\] {
-    margin: 100px;
+  .sm\:container {
+    width: 100%;
   }
 
-  .sm\:mt-10 {
-    margin-top: 2.5rem;
+  @media (min-width: 640px) {
+    .sm\:container {
+      max-width: 640px;
+    }
   }
 
-  .sm\:mt-1 {
-    margin-top: 0.25rem;
+  @media (min-width: 768px) {
+    .sm\:container {
+      max-width: 768px;
+    }
   }
 
-  .sm\:mt-6 {
-    margin-top: 1.5rem;
+  @media (min-width: 1024px) {
+    .sm\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .sm\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .sm\:container {
+      max-width: 1536px;
+    }
   }
 
   .sm\:w-auto {
@@ -803,11 +877,22 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:m-\[100px\] {
-    margin: 100px;
-  }
-
   .lg\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .lg\:px-\[\] {
+    padding-left: ;
+    padding-right: ;
+  }
+
+  .lg\:px-\[40\] {
+    padding-left: 40;
+    padding-right: 40;
+  }
+
+  .lg\:px-\[40px\] {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
